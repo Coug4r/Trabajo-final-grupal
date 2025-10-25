@@ -92,6 +92,7 @@ tbody tr:nth-child(odd) {
   }
   td{
     text-align: center;
+    color: white;
   }
   .areaTabla{
     margin-top: 20px;
@@ -181,4 +182,7 @@ tbody tr:nth-child(odd) {
     color:red;
     font-style: italic;
     font-size: 14px;
+}
+th{
+     color: white;
 }

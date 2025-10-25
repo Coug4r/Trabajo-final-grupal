@@ -4,36 +4,52 @@
 <head>
     <script src="utilitarios.js"></script>
     <script src="punto2.js"></script>
+    <link rel="stylesheet" href="prueba.css">
 </head>
 
-<body onload="mostrarEstudiantes();">
-    <div>
-        <input type="button" value="AGREGAR ESTUDIANTE" onclick="agregar();">
-    </div>
-    <div style="display: flex; flex-direction: column;">
-        <label for="">ID</label>
-        <input  style="width: 200px;" type="number" id="txtId" min="0">
-        <p id="lblErrorCampo" style="color: red;">Este campo no debe estar vacio</p>
-        <label for="">Nombre</label>
-        <input  style="width: 200px;" type="text" id="txtNombre" min="0">
-        <p id="lblErrorCampo2" style="color: red;">Este campo no debe estar vacio</p>
-        <label for="">ASISTENCIA</label>
-        <div >
-            <input type="button" value="PRESENTE" onclick="presente();">
-            <input type="button" value="AUSENTE" onclick="ausente();">
+
+<body onload="mostrarEstudiantes();">   
+    <div class="menu">
+        <div class="contenedorBoton">
+            <a class="estiloBoton"   onclick="mostrarOpcionEmpleado();" href="./asistenciaCurso.html">ASISTENCIA</a>
         </div>
+        <div class="contenedorBoton">
+            <a class="estiloBoton"   onclick="mostrarOpcionRol();" href="./punto2.html">REGISTRO</a>
+        </div>
+        <div class="contenedorBoton">
+            <input type="button" value="RESUMEN" class="estiloBoton" onclick="mostrarOpcionResumen();" />
+        </div>
+    </div> 
+    <div id="divRol" style="display: block;">
+        <div>
+            <input class="estiloBoton" style="width: 200px;" type="button" value="AGREGAR ESTUDIANTE" onclick="agregar();">
+        </div>
+        <div style="display: flex; flex-direction: column;">
+            <label for="">ID</label>
+            <input  style="width: 200px;" type="number" id="txtId" min="0">
+            <p id="lblErrorCampo" style="color: red;">Este campo no debe estar vacio</p>
+            <label for="">Nombre</label>
+            <input  style="width: 200px;" type="text" id="txtNombre" min="0">
+            <p id="lblErrorCampo2" style="color: red;">Este campo no debe estar vacio</p>
+            <label for="">ASISTENCIA</label>
+            <div >
+                <input class="estiloBoton" type="button" value="PRESENTE" onclick="presente();">
+                <input class="estiloBoton" type="button" value="AUSENTE" onclick="ausente();">
+            </div>
 
-    </div>
-    <div>
-        <table>
-            <thead>
-                <th>ID</th>
-                <th>ASISTENCIA</th>
-            </thead>
-            <tbody id="tableContent">
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>ASISTENCIA</th>
+                </thead>
+                <tbody id="tableContent">
 
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 
