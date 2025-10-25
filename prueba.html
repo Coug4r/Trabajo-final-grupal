@@ -11,7 +11,7 @@
 <body onload="mostrarOpcionEmpleado();">
     <div class="menu">
         <div class="contenedorBoton">
-            <input type="button" value="EMPLEADO" class="estiloBoton" onclick="mostrarOpcionEmpleado();"/>
+            <input type="button" value="Estudiantes" class="estiloBoton" onclick="mostrarOpcionEmpleado();"/>
         </div>
         <div class="contenedorBoton">
             <input type="button" value="ROL" class="estiloBoton" onclick="mostrarOpcionRol();"/>
@@ -26,22 +26,7 @@
             <div class="area">
                 <div class="ingresoDatos">
                     <div class="tituloCampo">
-                        CEDULA
-                    </div>
-                    <div>
-                        <input type="text" class="cajaTexto" id="txtBusquedaCedula" />
-                        <div class="error" id="lblErrorBusqueda"></div>
-                    </div>
-                </div>
-                <div class="contenedorBoton">
-                    <input type="button" value="BUSCAR" class="estiloBoton" onclick="ejecutarBusqueda();"/>
-                </div>
-            </div>
-
-            <div class="area">
-                <div class="ingresoDatos">
-                    <div class="tituloCampo">
-                        CEDULA
+                        Curso
                     </div>
                     <div>
                         <input type="text" class="cajaTexto" id="txtCedula" />
@@ -50,42 +35,16 @@
                 </div>
                 <div class="ingresoDatos">
                     <div class="tituloCampo">
-                        NOMBRE
+                        Docente
                     </div>
                     <div>
                         <input type="text" class="cajaTexto" id="txtNombre" />
                         <div class="error" id="lblErrorNombre"></div>
                     </div>
                 </div>
-                <div class="ingresoDatos">
-                    <div class="tituloCampo">
-                        APELLIDO
-                    </div>
-                    <div>
-                        <input type="text" class="cajaTexto" id="txtApellido" />
-                        <div class="error" id="lblErrorApellido"></div>
-                    </div>
-                </div>
-                <div class="ingresoDatos">
-                    <div class="tituloCampo">
-                        SUELDO
-                    </div>
-                    <div>
-                        <input type="text" class="cajaTexto" id="txtSueldo" />
-                        <div class="error" id="lblErrorSueldo"></div>
-                    </div>
-                </div>
-                <div class="botones">
-                    <div class="contenedorBoton">
-                        <input type="button" value="NUEVO" class="estiloBoton" onclick="ejecutarNuevo();" />
-                    </div>
-                    <div class="contenedorBoton">
-                        <input type="button" value="GUARDAR" class="estiloBoton" id="btnGuardar" onclick="guardar();"/>
-                    </div>
-                    <div class="contenedorBoton">
-                        <input type="button" value="LIMPIAR" class="estiloBoton" onclick="limpiar();" />
-                    </div>
-                </div>
+               
+                
+                
                 <div id="tablaEmpleados" class="areaTabla">
 
                 </div>
