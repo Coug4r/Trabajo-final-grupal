@@ -3,98 +3,37 @@
 
 <head>
     <script src="utilitarios.js"></script>
-    <script src="prueba.js"></script>
-    <script src="utilitariosCadenas.js"></script>
-    <link rel="stylesheet" href="prueba.css">
+    <script src="punto2.js"></script>
 </head>
 
-<body onload="mostrarOpcionEmpleado();">
-    <div class="menu">
-        <div class="contenedorBoton">
-            <input type="button" value="EMPLEADO" class="estiloBoton" onclick="mostrarOpcionEmpleado();"/>
-        </div>
-        <div class="contenedorBoton">
-            <input type="button" value="ROL" class="estiloBoton" onclick="mostrarOpcionRol();"/>
-        </div>
-        <div class="contenedorBoton">
-            <input type="button" value="RESUMEN" class="estiloBoton" onclick="mostrarOpcionResumen();" />
+<body onload="mostrarEstudiantes();">
+    <div>
+        <input type="button" value="AGREGAR ESTUDIANTE" onclick="agregar();">
+    </div>
+    <div style="display: flex; flex-direction: column;">
+        <label for="">ID</label>
+        <input  style="width: 200px;" type="number" id="txtId" min="0">
+        <p id="lblErrorCampo" style="color: red;">Este campo no debe estar vacio</p>
+        <label for="">Nombre</label>
+        <input  style="width: 200px;" type="text" id="txtNombre" min="0">
+        <p id="lblErrorCampo2" style="color: red;">Este campo no debe estar vacio</p>
+        <label for="">ASISTENCIA</label>
+        <div >
+            <input type="button" value="PRESENTE" onclick="presente();">
+            <input type="button" value="AUSENTE" onclick="ausente();">
         </div>
 
     </div>
-    
-    <div id="divEmpleado">
-        <div class="principal">
-            <div class="area">
-                <div class="ingresoDatos">
-                    <div class="tituloCampo">
-                        CEDULA
-                    </div>
-                    <div>
-                        <input type="text" class="cajaTexto" id="txtBusquedaCedula" />
-                        <div class="error" id="lblErrorBusqueda"></div>
-                    </div>
-                </div>
-                <div class="contenedorBoton">
-                    <input type="button" value="BUSCAR" class="estiloBoton" onclick="ejecutarBusqueda();"/>
-                </div>
-            </div>
+    <div>
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>ASISTENCIA</th>
+            </thead>
+            <tbody id="tableContent">
 
-            <div class="area">
-                <div class="ingresoDatos">
-                    <div class="tituloCampo">
-                        CEDULA
-                    </div>
-                    <div>
-                        <input type="text" class="cajaTexto" id="txtCedula" />
-                        <div class="error" id="lblErrorCedula"></div>
-                    </div>
-                </div>
-                <div class="ingresoDatos">
-                    <div class="tituloCampo">
-                        NOMBRE
-                    </div>
-                    <div>
-                        <input type="text" class="cajaTexto" id="txtNombre" />
-                        <div class="error" id="lblErrorNombre"></div>
-                    </div>
-                </div>
-                <div class="ingresoDatos">
-                    <div class="tituloCampo">
-                        APELLIDO
-                    </div>
-                    <div>
-                        <input type="text" class="cajaTexto" id="txtApellido" />
-                        <div class="error" id="lblErrorApellido"></div>
-                    </div>
-                </div>
-                <div class="ingresoDatos">
-                    <div class="tituloCampo">
-                        SUELDO
-                    </div>
-                    <div>
-                        <input type="text" class="cajaTexto" id="txtSueldo" />
-                        <div class="error" id="lblErrorSueldo"></div>
-                    </div>
-                </div>
-                <div class="botones">
-                    <div class="contenedorBoton">
-                        <input type="button" value="NUEVO" class="estiloBoton" onclick="ejecutarNuevo();" />
-                    </div>
-                    <div class="contenedorBoton">
-                        <input type="button" value="GUARDAR" class="estiloBoton" id="btnGuardar" onclick="guardar();"/>
-                    </div>
-                    <div class="contenedorBoton">
-                        <input type="button" value="LIMPIAR" class="estiloBoton" onclick="limpiar();" />
-                    </div>
-                </div>
-                <div id="tablaEmpleados" class="areaTabla">
-
-                </div>
-            </div>
-            <div class="logoEscuela">
-                <img src="./imagenes/empleado.png" width="80%" />
-            </div>
-        </div>
+            </tbody>
+        </table>
     </div>
 </body>
 
