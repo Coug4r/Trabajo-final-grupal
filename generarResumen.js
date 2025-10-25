@@ -1,7 +1,31 @@
 let asistencias = [
-    {nombreCurso: "curso 1", nombreDocente: "Alberto", estudiantes:"Becker", estado: "presente"},
-    {nombreCurso: "curso 2", nombreDocente: "Filberto", estudiantes:"Toni", estado: "ausente"},
+    {nombreCurso: "curso 1", nombreDocente: "Alberto", estudiantes:"Becker", estado: "Presente"},
+    {nombreCurso: "curso 2", nombreDocente: "Filberto", estudiantes:"Toni", estado: "Ausente"},
 ]
+
+
+let sumarAsitencias = function(){
+    let cmp;
+    let cantidadPresentes = 0;
+    for(let i = 0; i<asistencias.length;i++){
+        cmp = asistencias[i];
+        if(cmp.estado=="Presente"){
+            cantidadPresentes++;
+        }
+    }
+    return cantidadPresentes;
+}
+let sumarAusencias = function(){
+    let cmp;
+    let cantidadAusentes = 0;
+    for(let i = 0; i<asistencias.length;i++){
+        cmp = asistencias[i];
+        if(cmp.estado=="Ausente"){
+            cantidadAusentes++;
+        }
+    }
+    return cantidadAusentes;
+}
 
 mostrarResumen = function () {
     let cmpTabla = document.getElementById("tablaResumen");
@@ -16,15 +40,14 @@ mostrarResumen = function () {
             ;
             
     }
-    mostrarTexto("lblResumen","Este dia hubo: "+ i+ " estudiantes.")
+    
+    
     contenidoTabla += "</table>";
     cmpTabla.innerHTML = contenidoTabla;
+    let presentes = sumarAsitencias();
+    let ausentes = sumarAusencias();
+    mostrarTexto("lblResumen","Este dia hubo: "+ i+ " estudiantes.");
+    mostrarTexto("lblPresentes","Este dia hubo: "+ presentes+ " estudiantes presentes.");
+    mostrarTexto("lblAusentes","Este dia hubo: "+ ausentes+ " estudiantes ausentes.");
 }
 
-let sumarAsitencias = function(){
-    let cmp;
-
-}
-let sumarAusencias = function(){
-    let cmp;
-}
