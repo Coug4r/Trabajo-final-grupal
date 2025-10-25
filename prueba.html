@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="utilitarios.js"></script>
+    <script src="prueba.js"></script>
+    <script src="utilitariosCadenas.js"></script>
+    <script src="asistenciaCurso.js"> </script>
+    <link rel="stylesheet" href="prueba.css">
+</head>
+
+<body onload="mostrarEstudiante();">
+    <div class="menu">
+        <div class="contenedorBoton">
+            <input type="button" value="REGISTRO" class="estiloBoton" onclick="mostrarOpcionEmpleado();" />
+        </div>
+        <div class="contenedorBoton">
+            <input type="button" value="ROL" class="estiloBoton" onclick="mostrarOpcionRol();" />
+        </div>
+        <div class="contenedorBoton">
+            <input type="button" value="RESUMEN" class="estiloBoton" onclick="mostrarOpcionResumen();" />
+        </div>
+
+    </div>
+    <div id="divEmpleado">
+        <div class="principal">
+
+            <div class="area">
+
+
+
+                <div class="ingresoDatos">
+                    <div class="tituloCampo">
+                        NOMBRE DEL CURSO:
+                    </div>
+                    <div>
+                        <input type="text" class="cajaTexto" id="txtNomCurso" />
+                        <div class="error" id="lblError"></div>
+                    </div>
+                </div>
+                <div class="ingresoDatos">
+                    <div class="tituloCampo">
+                        NOMBRE DEL DOCENTE RESPONSABLE:
+                    </div>
+                    <div>
+                        <input type="text" class="cajaTexto" id="txtNomDocente" />
+                        <div class="error" id="lblError1"></div>
+                    </div>
+                </div>
+                <div class="botones">
+                    <div class="contenedorBoton">
+                        <input type="button" value="GUARDAR" class="estiloBoton" onclick="crearAsistencia();" />
+                    </div>
+                    <h5 id="lblMensaje"></h5>
+                </div>
+                <div id="tablaEmpleados" class="areaTabla">
+
+                </div>
+            </div>
+            <div class="logoEscuela">
+                <img src="dicente.png" width="30%" />
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
