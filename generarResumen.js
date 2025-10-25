@@ -12,9 +12,19 @@ mostrarResumen = function () {
         contenidoTabla += "<tr><td>" + elementoAsistencias.nombreCurso + "</td>" +
             "<td>" + elementoAsistencias.nombreDocente + "</td>" +
             "<td>" + elementoAsistencias.estudiantes + "</td>" +
-            "<td>" + elementoAsistencias.estado + "</td>";
+            "<td>" + elementoAsistencias.estado + "</td>"
+            ;
+            
     }
+    mostrarTexto("lblResumen","Este dia hubo: "+ i+ " estudiantes.")
     contenidoTabla += "</table>";
     cmpTabla.innerHTML = contenidoTabla;
 }
 
+let sumarAsitencias = function(){
+    let cmp;
+
+}
+let sumarAusencias = function(){
+    let cmp;
+}
